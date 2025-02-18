@@ -17,6 +17,10 @@ export default <Partial<Config>>{
 		"app/{A,a}pp.{vue,js,jsx,mjs,ts,tsx}",
 		"app/{E,e}rror.{vue,js,jsx,mjs,ts,tsx}",
 		"app/app.config.{js,ts,mjs}",
+		'./node_modules/preline/dist/*.js',
+	],
+	plugins: [
+		require('preline/plugin'),
 	],
 	safelist: [
 		{
