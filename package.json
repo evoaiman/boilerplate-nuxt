@@ -19,7 +19,7 @@
 	"dependencies": {
 		"@floating-ui/dom": "^1.6.13",
 		"@nuxt/image": "^1.8.1",
-		"@preline/accordion": "^2.5.2",
+		"@preline/accordion": "^3.0.0",
 		"@supabase/supabase-js": "^2.49.1",
 		"@vueuse/core": "^12.8.2",
 		"apexcharts": "^4.3.0",
