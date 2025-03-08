@@ -7,7 +7,7 @@ export const useVehicleStore = defineStore("vehicles", {
 
   actions: {
     async fetchVehicles() {
-      const { data: response } = await useFetch("/api/supabase?table=vehicles");
+      const { data: response } = await useFetch("/api/supabase-api/vehicles");
       
       if (response.value?.data) {
         this.vehicles = response.value.data;

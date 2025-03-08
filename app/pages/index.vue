@@ -28,9 +28,10 @@
 
 <script lang="ts" setup>
 const vehicleStore = useVehicleStore();
+const instrumentStore = useInstrumentStore();
 
 await vehicleStore.fetchVehicles();
-
+await instrumentStore.fetchInstruments();
 const softwareList = [
   {
     name: 'MyFetdos v1.1',
