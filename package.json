@@ -17,8 +17,10 @@
 		"clean": "nuxt cleanup"
 	},
 	"dependencies": {
+		"@floating-ui/dom": "^1.6.13",
 		"@nuxt/image": "^1.8.1",
 		"@preline/accordion": "^2.5.2",
+		"@supabase/supabase-js": "^2.49.1",
 		"@vueuse/core": "^12.8.2",
 		"apexcharts": "^4.3.0",
 		"echarts": "^5.6.0",
@@ -26,6 +28,7 @@
 		"lottie-web": "^5.12.2",
 		"nuxt": "^3.15.0",
 		"preline": "^3.0.0",
+		"vanilla-calendar-pro": "^3.0.3",
 		"vue": "latest",
 		"vue-echarts": "^7.0.3",
 		"vue-router": "latest",

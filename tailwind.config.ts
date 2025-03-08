@@ -20,11 +20,11 @@ export default <Partial<Config>>{
 		'./node_modules/preline/dist/*.js',
 	],
 	plugins: [
-		require('preline/plugin'),
+		// require('preline/plugin'),
 	],
-	safelist: [
-		{
-			pattern: /(bg|text|border)-(background|surface)-(darkGrey|offWhite|white|grey|dark|light|low|mid|high)/,
-		},
-	],
+	// safelist: [
+	// 	{
+	// 		pattern: /(bg|text|border)-(background|surface)-(darkGrey|offWhite|white|grey|dark|light|low|mid|high)/,
+	// 	},
+	// ],
 };
