@@ -1,30 +1,30 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
-export default <Partial<Config>>{
-	theme: {
-		extend: {
-		},
-	},
-	mode: "jit",
-	darkMode: "class",
-	content: [
-		"app/components/**/*.{vue,js,jsx,mjs,ts,tsx}",
-		"app/layouts/**/*.{vue,js,jsx,mjs,ts,tsx}",
-		"app/pages/**/*.{vue,js,jsx,mjs,ts,tsx}",
-		"app/plugins/**/*.{js,ts,mjs}",
-		"app/composables/**/*.{js,ts,mjs}",
-		"app/utils/**/*.{js,ts,mjs}",
-		"app/{A,a}pp.{vue,js,jsx,mjs,ts,tsx}",
-		"app/{E,e}rror.{vue,js,jsx,mjs,ts,tsx}",
-		"app/app.config.{js,ts,mjs}",
-		'./node_modules/preline/dist/*.js',
-	],
-	plugins: [
-		// require('preline/plugin'),
-	],
-	// safelist: [
-	// 	{
-	// 		pattern: /(bg|text|border)-(background|surface)-(darkGrey|offWhite|white|grey|dark|light|low|mid|high)/,
-	// 	},
-	// ],
+const srcDir = '.';
+const config: Config = {
+  content: [
+    `${srcDir}/components/**/*.{vue,js,ts}`,
+    `${srcDir}/layouts/**/*.vue`,
+    `${srcDir}/pages/**/*.vue`,
+    `${srcDir}/composables/**/*.{js,ts}`,
+    `${srcDir}/plugins/**/*.{js,ts}`,
+    `${srcDir}/utils/**/*.{js,ts}`,
+    `${srcDir}/App.{js,ts,vue}`,
+    `${srcDir}/app.{js,ts,vue}`,
+    `${srcDir}/Error.{js,ts,vue}`,
+    `${srcDir}/error.{js,ts,vue}`,
+    `${srcDir}/app.config.{js,ts}`,
+    './node_modules/preline/preline.js',
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+    },
+  },
+  plugins: [require('@tailwindcss/forms'), require('preline/plugin')],
 };
+export default config;

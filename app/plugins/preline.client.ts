@@ -1,12 +1,11 @@
-// ~/plugins/preline.js
-import 'preline';
+import 'preline/preline';
 
 declare var HSStaticMethods: {
-    autoInit(collection?: string | string[]): void;
+  autoInit(collection?: string | string[]): void;
 };
 
 export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.hook('page:finish', () => {
-        HSStaticMethods.autoInit();
-    });
+  nuxtApp.hook('page:finish', () => {
+    HSStaticMethods.autoInit();
+  });
 });

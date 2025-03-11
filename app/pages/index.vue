@@ -1,27 +1,35 @@
 <template>
-  <!-- Hero Section -->
-  <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 pt-24 sm:pt-44">
-    <div class="text-center">
-      <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 md:text-5xl">
-        Myfetdos Software Downloads
-      </h1>
-      <p class="mt-3 text-base sm:text-lg text-gray-600">
-        Access and download verified medical software for healthcare professionals
-      </p>
-    </div>
-  </div>
+  <div class="hs-dropdown [--strategy:absolute] [--flip:false] hs-dropdown-example relative inline-flex">
+    <button id="hs-dropdown-example" type="button"
+      class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+      aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+      Actions
+      <svg class="hs-dropdown-open:rotate-180 size-4 text-gray-600 dark:text-neutral-600"
+        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m6 9 6 6 6-6"></path>
+      </svg>
+    </button>
 
-  <!-- File Grid -->
-  <div class="max-w-[85rem] px-4 py-6 sm:py-10 sm:px-6 lg:px-8 mx-auto">
-    <!-- Search and Filter Bar -->
-
-
-    <!-- File Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-      <div v-for="(software, index) in softwareList" :key="index"
-        class="flex flex-col bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-slate-900 dark:border-gray-700">
-        <Card :software="software" />
-      </div>
+    <div
+      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-10 mt-2 min-w-60 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
+      role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-example">
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+        href="#">
+        Newsletter
+      </a>
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+        href="#">
+        Purchases
+      </a>
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+        href="#">
+        Downloads
+      </a>
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+        href="#">
+        Team Account
+      </a>
     </div>
   </div>
 </template>
